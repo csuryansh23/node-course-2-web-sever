@@ -47,7 +47,7 @@ app.get('/',(req,res)=>{
     }); */
     res.render('home.hbs',{
       pageTitle:'Home Page',
-      welcomeMsg:'Welcome to my Home !',
+      welcomeMsg:'Welcome to my Home !'
     });
 });
 
@@ -57,6 +57,11 @@ app.get('/about',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle :'Projets' 
+    });
+});
 app.get('/bad',(req,res)=>{
     res.send({
         errorMessage: 'Unable to handle request'
